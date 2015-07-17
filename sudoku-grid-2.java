@@ -27,12 +27,12 @@ public class SudokuGrid2 {
          use that format over and over to complete our task!
          
          */
-        String horizontalLine =  "XXXXXXXXXXXXXXXXXXXXX"; //
+        String horizontalLine =  "XXXXXXXXXXXXXXXXXXXXX";
         String one = "1";
         String two = "2";
         String three = "3";
         String four = "4";
-        String five = "5";
+        //String five = "5";
         String six = "6";
         String seven = "7";
         String eight = "8";
@@ -43,43 +43,44 @@ public class SudokuGrid2 {
         
         //String part1 = String.format(gridData, one, two, three);
         
+        // Removing all fives
         System.out.printf("%s | %s | %s\n"
                             , String.format(gridData, one, two, three)
-                            , String.format(gridData, four, five, six)
+                            , String.format(gridData, four, blank, six)
                             , String.format(gridData, seven, eight, nine));
         System.out.printf("%s | %s | %s\n"
-                            , String.format(gridData, four, five, six)
+                            , String.format(gridData, four, blank, six)
                             , String.format(gridData, seven, eight, nine)
                             , String.format(gridData, one, two, three));
         System.out.printf("%s | %s | %s\n"
                             , String.format(gridData, seven, eight, nine)
                             , String.format(gridData, one, two, three)
-                            , String.format(gridData, four, five, six));
+                            , String.format(gridData, four, blank, six));
         System.out.println(horizontalLine);
         System.out.printf("%s | %s | %s\n"
                             , String.format(gridData, two, three, four)
-                            , String.format(gridData, five, six, seven)
+                            , String.format(gridData, blank, six, seven)
                             , String.format(gridData, eight, nine, one));
         System.out.printf("%s | %s | %s\n"
-                            , String.format(gridData, five, six, seven)
+                            , String.format(gridData, blank, six, seven)
                             , String.format(gridData, eight, nine, one)
                             , String.format(gridData, two, three, four));
         System.out.printf("%s | %s | %s\n"
                             , String.format(gridData, eight, nine, one)
                             , String.format(gridData, two, three, four)
-                            , String.format(gridData, five, six, seven));
+                            , String.format(gridData, blank, six, seven));
         System.out.println(horizontalLine);
         System.out.printf("%s | %s | %s\n"
-                            , String.format(gridData, three, four, five)
+                            , String.format(gridData, three, four, blank)
                             , String.format(gridData, six, seven, eight)
                             , String.format(gridData, nine, one, two));
         System.out.printf("%s | %s | %s\n"
                             , String.format(gridData, six, seven, eight)
                             , String.format(gridData, nine, one, two)
-                            , String.format(gridData, three, four, five));
+                            , String.format(gridData, three, four, blank));
         System.out.printf("%s | %s | %s\n"
                             , String.format(gridData, nine, one, two)
-                            , String.format(gridData, three, four, five)
+                            , String.format(gridData, three, four, blank)
                             , String.format(gridData, six, seven, eight));
     }
 }
