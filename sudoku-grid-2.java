@@ -1,34 +1,40 @@
 import java.util.*;
 
-public class SudokuGrid2 {
+public class SudokuGrid {
+    final static String ONE = "1";
+    final static String TWO = "2";
+    final static String THREE = "3";
+    final static String FOUR = "4";
+    final static String FIVE = "5";
+    final static String SIX = "6";
+    final static String SEVEN = "7";
+    final static String EIGHT = "8";
+    final static String NINE = "9";
+    final static String BLANK = " ";
+    final static String HORIZONTAL_LINE = "XXXXXXXXXXXXXXXXXXXXX";
+    static String GridLine = "%s | %s | %s\n";
+    static String GridData = "%s:%s:%s";
+    static Scanner input;
+    
     public static void main(String[] args)
     {
-        //take a look for a repeating pattern in the previous output:
-        /*
-            1:2:3 | 4:5:6 | 7:8:9
-            4:5:6 | 7:8:9 | 1:2:3
-            7:8:9 | 1:2:3 | 4:5:6
-            ---------------------
-            2:3:4 | 5:6:7 | 8:9:1
-            5:6:7 | 8:9:1 | 2:3:4
-            8:9:1 | 2:3:4 | 5:6:7
-            ---------------------
-            3:4:5 | 6:7:8 | 9:1:2
-            6:7:8 | 9:1:2 | 3:4:5
-            9:1:2 | 3:4:5 | 6:7:8
-            
-            * %s | %s | %s
-            * %s:%s:%s
-         
-         Notice, it is number colon, number colon, number
-         if we were doing a printf, this would be "%s:%s:%s", provided
-         our data is stored as a string.  Now, obviously this isn't the ONLY
-         solution for Sudoku, so we want to be flexible in our output.
-         
-         Therefore, here we are going to learn a way to format a string, and
-         use that format over and over to complete our task!
-         
-         */
+        System.out.println("Welcome to Sudoku!");
+        System.out.println(HORIZONTAL_LINE);
+        input = new Scanner(System.in);
+        PrintUnsolvedPuzzle(1);
+        
+        // Gather input a few times, but we aren't solving yet
+        // Too hard to track at this point
+        GatherInput();
+        GatherInput();
+        GatherInput();
+        GatherInput();
+        GatherInput();
+        //etc...
+        // Doesn't it seem like there should be a better way?
+        // How would we possibly know how many gathers
+        // If the user gets many wrong?
+        
         String horizontalLine =  "XXXXXXXXXXXXXXXXXXXXX";
         String one = "1";
         String two = "2";
