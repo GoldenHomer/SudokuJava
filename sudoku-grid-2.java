@@ -195,4 +195,16 @@ public class SudokuGrid {
             }
         }
     }
+    
+    /**
+     * Build a set of three numbers
+     * @param x the first number
+     * @param y the second number
+     * @param z the third number
+     * @return 
+     */
+    public static String BuildSetOfThree(String x, String y, String z)
+    {
+        return String.format(GridData, x, y, z);
+    }
 }
