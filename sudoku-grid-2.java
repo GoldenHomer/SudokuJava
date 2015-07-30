@@ -50,4 +50,149 @@ public class SudokuGrid {
         PrintGridLine(8, difficulty);
         PrintGridLine(9, difficulty);
     }
+    
+    /**
+     * Print a specific grid line by difficulty
+     * @param lineNumber
+     * @param difficulty 
+     */
+    public static void PrintGridLine(int lineNumber, int difficulty)
+    {
+        String firstThree;
+        String secondThree;
+        String thirdThree;
+        
+        if (difficulty == 1)
+        {
+            switch(lineNumber)
+            {
+                case 1:
+                    firstThree = BuildSetOfThree(BLANK, BLANK
+                                            , GetSolutionItem(0,2)); 
+                    secondThree = BuildSetOfThree(BLANK, BLANK
+                                            , GetSolutionItem(0,5));
+                    thirdThree = BuildSetOfThree(GetSolutionItem(0,6)
+                                            , GetSolutionItem(0,7)
+                                            , BLANK);
+                    
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 2:
+                    firstThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(1,1)
+                                    , BLANK);
+                    secondThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(1,4)
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , GetSolutionItem(1,8));
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    
+                    break;
+                case 3:
+                    firstThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , GetSolutionItem(2,2));
+                    secondThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , GetSolutionItem(2,5));
+                    thirdThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , BLANK);
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 4:
+                    firstThree = BuildSetOfThree(GetSolutionItem(3,0)
+                                    , BLANK
+                                    , BLANK);
+                    secondThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(3,4)
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(3,7)
+                                    , BLANK);
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 5:
+                    firstThree = BuildSetOfThree(GetSolutionItem(4,0)
+                                    , GetSolutionItem(4,1)
+                                    , BLANK);
+                    secondThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(4,7)
+                                    , GetSolutionItem(4,8));
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 6:
+                    firstThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(5,1)
+                                    , BLANK);
+                    secondThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(5,4)
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , GetSolutionItem(5,8));
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 7:
+                    firstThree = BuildSetOfThree(BLANK
+                                    , BLANK
+                                    , BLANK);
+                    secondThree = BuildSetOfThree(GetSolutionItem(6,3)
+                                    , BLANK
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(GetSolutionItem(6,6)
+                                    , BLANK
+                                    , BLANK);
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 8:
+                    firstThree = BuildSetOfThree(GetSolutionItem(7,0)
+                                    , BLANK
+                                    , BLANK);
+                    secondThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(7,4)
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(7,7)
+                                    , BLANK);
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+                case 9:
+                    firstThree = BuildSetOfThree(BLANK
+                                    , GetSolutionItem(8,1)
+                                    , GetSolutionItem(8,2));
+                    secondThree = BuildSetOfThree(GetSolutionItem(8,3)
+                                    , BLANK
+                                    , BLANK);
+                    thirdThree = BuildSetOfThree(GetSolutionItem(8,6)
+                                    , BLANK
+                                    , BLANK);
+                    System.out.printf(GridLine, firstThree
+                                        , secondThree
+                                        , thirdThree);
+                    break;
+            }
+        }
+    }
 }
