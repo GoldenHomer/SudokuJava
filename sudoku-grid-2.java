@@ -35,4 +35,19 @@ public class SudokuGrid {
         // How would we possibly know how many gathers
         // If the user gets many wrong?
     }
+    
+    public static void PrintUnsolvedPuzzle (int difficulty)
+    {
+        PrintGridLine(1, difficulty);
+        PrintGridLine(2, difficulty);
+        PrintGridLine(3, difficulty);
+        System.out.println(HORIZONTAL_LINE);
+        PrintGridLine(4, difficulty);
+        PrintGridLine(5, difficulty);
+        PrintGridLine(6, difficulty);
+        System.out.println(HORIZONTAL_LINE);
+        PrintGridLine(7, difficulty);
+        PrintGridLine(8, difficulty);
+        PrintGridLine(9, difficulty);
+    }
 }
