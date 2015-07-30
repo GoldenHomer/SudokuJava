@@ -447,4 +447,35 @@ public class SudokuGrid {
         }
         return null; 
     }
+    
+    /**
+     * Get input from the user for a position to solve
+     */
+    public static void GatherInput()
+    {
+        System.out.println("Enter coordinate row of new value 0 - 8:");
+        int row = input.nextInt();
+        System.out.println("Enter coordinate column of new value 0 - 8:");
+        int col = input.nextInt();
+        input.nextLine();
+        System.out.println("Enter the value for this position: ");
+        String val = input.nextLine();
+        
+        //critical note: For String equality, we CANNOT use == in java
+        //instead, we call to the 'equals(object obj) method
+        //this will evaluate one String against another object
+        //to see if they are equal Strings
+        String solVal = GetSolutionItem(row,col);
+        if (solVal.equals(val))
+        {
+            String result = String.format("%s is the correct value "
+                + "for coordinate [%d, %d]! Good job!"
+                , val, row, col);
+            System.out.println(result);
+        }
+        else
+        {
+            System.out.println("Incorrect value for " + "that coordinate!");
+        }
+    }
 }
