@@ -207,4 +207,244 @@ public class SudokuGrid {
     {
         return String.format(GridData, x, y, z);
     }
+    
+    /**
+     * Return a solution item from the solved grid
+     * @param row -- the row coordinate
+     * @param column -- the column coordinate
+     * @return the value for the specific spot on the grid
+     */
+    public static String GetSolutionItem(int row, int column)
+    {  
+        //  0  1  2   3  4  5   6  7  8
+        //0 6  9  5   7  8  3   1  4  2
+        //1 1  7  8   6  2  4   3  9  5
+        //2 3  4  2   5  9  1   8  6  7
+        
+        //3 2  1  7   8  3  9   4  5  6
+        //4 9  6  3   1  4  5   7  2  8
+        //5 8  5  4   2  7  6   9  1  3
+        
+        //6 5  2  9   3  1  8   6  7  4
+        //7 4  3  6   9  5  7   2  8  1
+        //8 7  8  1   4  6  2   5  3  9
+        
+        if (row == 0)
+        {
+            switch (column)
+            {
+                case 0:
+                    return SIX;
+                case 1:
+                    return NINE;
+                case 2:
+                    return FIVE;
+                case 3:
+                    return SEVEN;
+                case 4:
+                    return EIGHT;
+                case 5:
+                    return THREE;
+                case 6:
+                    return ONE;
+                case 7:
+                    return FOUR;
+                case 8:
+                    return TWO;
+            }
+        }
+        else if (row == 1)
+        {
+            switch (column)
+            {
+                case 0:
+                    return ONE;
+                case 1:
+                    return SEVEN;
+                case 2:
+                    return EIGHT;
+                case 3:
+                    return SIX;
+                case 4:
+                    return TWO;
+                case 5:
+                    return FOUR;
+                case 6:
+                    return THREE;
+                case 7:
+                    return NINE;
+                case 8:
+                    return FIVE;
+            }
+        }
+        else if (row == 2)
+        {
+            switch (column)
+            {
+                case 0:
+                    return THREE;
+                case 1:
+                    return FOUR;
+                case 2:
+                    return TWO;
+                case 3:
+                    return FIVE;
+                case 4:
+                    return NINE;
+                case 5:
+                    return ONE;
+                case 6:
+                    return EIGHT;
+                case 7:
+                    return SIX;
+                case 8:
+                    return SEVEN;
+            }
+        }
+        else if (row == 3)
+        {
+            switch (column)
+            {
+                case 0:
+                    return TWO;
+                case 1:
+                    return ONE;
+                case 2:
+                    return SEVEN;
+                case 3:
+                    return EIGHT;
+                case 4:
+                    return THREE;
+                case 5:
+                    return NINE;
+                case 6:
+                    return FOUR;
+                case 7:
+                    return FIVE;
+                case 8:
+                    return SIX;
+            }
+        }
+        else if (row == 4)
+        {
+            switch (column)
+            {
+                case 0:
+                    return NINE;
+                case 1:
+                    return SIX;
+                case 2:
+                    return THREE;
+                case 3:
+                    return ONE;
+                case 4:
+                    return FOUR;
+                case 5:
+                    return FIVE;
+                case 6:
+                    return SEVEN;
+                case 7:
+                    return TWO;
+                case 8:
+                    return EIGHT;
+            }
+        }
+        else if (row == 5)
+        {
+            switch (column)
+            {
+                case 0:
+                    return EIGHT;
+                case 1:
+                    return FIVE;
+                case 2:
+                    return FOUR;
+                case 3:
+                    return TWO;
+                case 4:
+                    return SEVEN;
+                case 5:
+                    return SIX;
+                case 6:
+                    return NINE;
+                case 7:
+                    return ONE;
+                case 8:
+                    return THREE;
+            }
+        }
+        else if (row == 6)
+        {
+            switch (column)
+            {
+                case 0:
+                    return FIVE;
+                case 1:
+                    return TWO;
+                case 2:
+                    return NINE;
+                case 3:
+                    return THREE;
+                case 4:
+                    return ONE;
+                case 5:
+                    return EIGHT;
+                case 6:
+                    return SIX;
+                case 7:
+                    return SEVEN;
+                case 8:
+                    return FOUR;
+            }
+        }
+        else if (row == 7)
+        {
+            switch (column)
+            {
+                case 0:
+                    return FOUR;
+                case 1:
+                    return THREE;
+                case 2:
+                    return SIX;
+                case 3:
+                    return NINE;
+                case 4:
+                    return FIVE;
+                case 5:
+                    return SEVEN;
+                case 6:
+                    return TWO;
+                case 7:
+                    return EIGHT;
+                case 8:
+                    return ONE;
+            }
+        }
+        else if (row == 8)
+        {
+            switch (column)
+            {
+                case 0:
+                    return SEVEN;
+                case 1:
+                    return EIGHT;
+                case 2:
+                    return ONE;
+                case 3:
+                    return FOUR;
+                case 4:
+                    return SIX;
+                case 5:
+                    return TWO;
+                case 6:
+                    return FIVE;
+                case 7:
+                    return THREE;
+                case 8:
+                    return NINE;
+            }
+        }
+        return null; 
+    }
 }
