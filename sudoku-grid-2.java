@@ -188,9 +188,7 @@ public class SudokuGrid {
                     thirdThree = BuildSetOfThree(GetSolutionItem(8,6)
                                     , BLANK
                                     , BLANK);
-                    System.out.printf(GridLine, firstThree
-                                        , secondThree
-                                        , thirdThree);
+                    System.out.printf(GridLine, firstThree, secondThree, thirdThree);
                     break;
             }
         }
@@ -468,9 +466,7 @@ public class SudokuGrid {
         String solVal = GetSolutionItem(row,col);
         if (solVal.equals(val))
         {
-            String result = String.format("%s is the correct value "
-                + "for coordinate [%d, %d]! Good job!"
-                , val, row, col);
+            String result = String.format("%s is the correct value " + "for coordinate [%d, %d]! Good job!" , val, row, col);
             System.out.println(result);
         }
         else
