@@ -1,3 +1,4 @@
+// A work in progress; code is terrible now. That will change.
 import java.util.*;
 
 public class SudokuGrid {
