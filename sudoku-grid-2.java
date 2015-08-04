@@ -37,7 +37,7 @@ public class SudokuGrid {
         
         input = new Scanner(System.in);
         solved = false;
-        while(!solved)
+        while (!solved)
         {
             //get user input
             GatherInput();
@@ -109,8 +109,8 @@ public class SudokuGrid {
         //int col = input.nextInt();
         //input.nextLine();
         
-        int userVal = GetIntWithPrompt("Enter the value for this position:"
-                                        , 1, 9);
+        int userVal = GetIntWithPrompt("Enter the value for this position:", 1, 9);
+        
         if (userVal == eEGGNumber)
         {
             //EASTER EGG
